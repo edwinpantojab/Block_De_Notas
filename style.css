@@ -1,0 +1,95 @@
+body {
+    background-color: navy;
+    background-image: url("bugatti.png");
+    background-size: 100% auto;
+    background-position: center top;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    zoom: unset;
+  }
+  
+.notepad {
+  max-width: 600px;
+  margin: 50px auto;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  padding: 10px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  animation: cambiarColor 2s ease-in-out infinite;
+}
+
+@keyframes cambiarColor {
+  0% {
+    background-color: blue;
+  }
+  50% {
+    background-color: green;
+  }
+  100% {
+    background-color: blue;
+  }
+}
+
+.content {
+  padding: 2%;
+}
+
+textarea {
+  width: 100%;
+  height: 50vh;
+  border: none;
+  outline: none;
+  resize: none;
+  font-size: 1em;
+  font-family: Arial, sans-serif;
+}
+
+.save-btn,
+.delete-btn {
+  padding: 1%;
+  background-color: #4caf50;
+  color: white;
+  border: 2px solid black;
+  border-radius: 1em;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-right: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.delete-btn {
+  background-color: #ff0000;
+  color: white;
+}
+
+.save-btn:hover,
+.delete-btn:hover {
+  background-color: white;
+  color: #4caf50;
+}
+
+.delete-btn:hover {
+  color: #ff0000;
+}
+
+@media screen and (max-width: 600px) {
+  .notepad {
+    margin: 20px auto;
+  }
+
+  textarea {
+    height: 30vh;
+  }
+
+  .save-btn,
+  .delete-btn {
+    padding: 2%;
+  }
+}
